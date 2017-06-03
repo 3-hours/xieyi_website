@@ -1,0 +1,132 @@
+#header {
+	border-bottom: 1px solid #c0c0c0;
+	box-shadow: 0 0 4px #c0c0c0;
+	position: relative;
+	min-width: 320px;
+}
+.header-nav {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.header-nav .logo {
+	float: left;
+	padding: 15px 0;
+}
+.header-nav .nav-bar {
+	float: right;
+}
+.show-btn {
+	display: none;
+	float: right;
+	width: 50px;
+	height: 45px;
+	margin: 10px;
+	border-radius: 4px;
+	padding: 8px 1px;
+	border:1px solid #B4B4B4;
+	box-sizing:border-box;
+}
+.show-btn:hover {
+	border:1px solid #B4B4B4;
+	background-color: #C0C0C0;
+}
+.show-btn span {
+	width: 45px;
+	height: 5px;
+	background-color: #cfdb00;
+	display: block;
+	margin-bottom: 6px;
+	border-radius: 3px;
+}
+.header-nav .nav-bar li {
+	float: left;
+	height: 70px;
+	line-height: 70px;
+	padding: 0 15px;
+	font-size: 14px;
+	font-family: "Microsoft Yahei";
+	transition: all 1s;
+}
+.header-nav .nav-bar li a {
+	display: block;
+	color: #1e1e1e;
+}
+.nav-bar .active {
+	background-color: #cfdb00;
+}
+.header-nav .nav-bar li:hover {
+	background-color: #cfdb00;
+}
+
+
+@media screen and (max-width: 680px) {
+	.header-nav .nav-bar {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 72px;
+		width: 100%;
+		background-color: #fff;
+		z-index: 10;
+	}
+	.header-nav .nav-bar li{
+		float: none;
+	} 
+	.show-btn {
+		display: block;
+	}
+}
+
+
+#footer {
+	text-align: center;
+}
+.concact-box {
+	background-color: #fff;
+}
+.concact-box h2 {
+	max-width: 200px;
+	margin: 64px auto 0;
+	position: relative;
+	font-size: 2.6rem;
+}
+.concact-box h2:before {
+	left: -80%;
+}
+.concact-box h2:after {
+	right: -80%;
+}
+.concact-box h2:after,.concact-box h2:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 120px;
+	height: 2px;
+	background-color: #cfdb00;
+}
+.concact-box div {
+	margin: 80px 0;
+	font-size: 1.4rem;
+	color: #666;
+}
+.copyright-bar {
+	background-color: #b4b4b4;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	border-top: 4px solid #cfdb00;
+	font-size: 1.6rem;
+}
+@media screen and (max-width: 560px) {
+	.concact-box h2:before {
+		left: -20%;
+	}
+	.concact-box h2:after {
+		right: -20%;
+	}
+	.concact-box h2:after,.concact-box h2:before {
+		width: 40px;
+	}
+	font-size
+}
+/**/

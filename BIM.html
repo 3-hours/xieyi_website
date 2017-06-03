@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>BIM</title>
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/bim.css"/>
+</head>
+<body>
+	<div id="header">
+		<div class="header-nav clearfix">
+			<a href="###" class="logo">
+				<img src="./img/logo.png">
+			</a>
+			<div class="show-btn"><span></span><span></span><span></span></div>
+			<ul class="nav-bar clearfix">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="About.html">About</a></li>
+				<li><a href="Rendering.html">Renderings</a></li>
+				<li class="active"><a href="BIM.html">BIM</a></li>
+				<li><a href="3D Animate.html">3D Animate</a></li>
+				<li><a href="Contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+		<div class="leader">
+			<h1>BIM</h1>
+		</div>
+		<div class="page-box first">
+			<div class="left">
+				<h2 class="big-title">1.	MODEL COMPLETION</h2>
+				<p class="small-p">Establishing and creating the visible and multi-dimension Architecture, Structural and MEP model.</p>
+				<div class="pic clearfix">
+					<img src="img/bim2.png"/>
+					<img src="img/bim3.png"/>
+					<img src="img/bim4.png"/>
+				</div>
+			</div>
+			<div class="right"><img src="img/bim-buliding1-1.png"/></div>
+		</div>
+		<div class="page-box second">
+			<div class="mask">
+				<div class="left">
+					<h2 class="big-title">2. CLASH DETECTION</h2>
+					<p class="small-p">Completing the clash detection among various design parties, engineers and even different organisations in construction drawings</p>
+					<div class="pic clearfix">
+						<img src="img/bim2-1.png"/>
+						<img src="img/bim2-2.png"/>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="page-box third">
+			<div class="left"><img src="img/bim-buliding2-1.png"/></div>
+			<div class="right">
+				<h2 class="big-title">3.	MODEL COMPLETION</h2>
+				<p class="small-p">Establishing and creating the visible and multi-dimension Architecture, Structural and MEP model.</p>
+				<div class="pic clearfix">
+					<img src="img/bim3-1.png"/>
+					<img src="img/bim3-2.png"/>
+				</div>
+			</div>
+		</div>
+		<div class="page-box four">
+			<div class="mask clearfix">
+				<div class="right"><img src="img/bg4.png"/></div>
+				<div class="left">
+					<h2 class="big-title">4.CURTAIN WALL REMEDYING</h2>
+					<p class="small-p">Completing the clash detection among various design parties, engineers and even different organisations in construction drawings</p>
+					<div class="pic clearfix">
+						<img src="img/bim4-1.png"/>
+						<img src="img/bim4-2.png"/>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="page-box five">
+			<div class="mask">
+				<div class="left">
+					<h2 class="big-title">5.BIM CONSULTING</h2>
+					<p class="small-p">To help you to precisely know what is BIM? How BIM use? When and who is suitably to implement BIM? </p>
+				</div>
+				<div class="triangle">
+					<span class="top-word">TOP</span>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div id="footer">
+		<div class="concact-box">
+			<h2>CONCACT US</h2>
+			<div>
+				<p>Mobile Phone：86 138 1690 3400</p>
+				<p>Email：eric@shining365.com</p>
+				<p>tel：+86 21 6598 6866-304  +86 21 6598 3188-304</p>
+			</div>
+		</div>
+		<div class="copyright-bar">
+			Copyright © 1998-2015 shining Group
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+		$(".triangle").on("click",function(){
+		 	$("html,body").animate({
+		 		scrollTop:0
+		 	},500)
+		})
+		$(".page-box").height(window.innerHeight).css({});
+		var posArr = [];
+		$(".page-box").each(function(index, key) {
+			posArr.push(parseInt($(key).position().top));
+		})
+		posArr.push(parseInt($("#footer").position().top));
+		console.log(posArr);
+		
+		$(document).on("mousewheel DOMMouseScroll", function(e) {
+			var sTop = $(document).scrollTop();
+			e.preventDefault();
+			if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail <0) {
+				switch(true) {
+					case sTop <= posArr[0] :
+						$("html,body").stop().animate({
+							scrollTop: 0
+						},300)
+						break;
+					case sTop <= posArr[1] :
+						$("html,body").stop().animate({
+							scrollTop: posArr[0]
+						},300)
+						break;
+					case sTop <= posArr[2] :
+						$("html,body").stop().animate({
+							scrollTop: posArr[1]
+						},300)
+						break;
+					case sTop <= posArr[3] :
+						$("html,body").stop().animate({
+							scrollTop: posArr[2]
+						},300)
+						break;
+					case sTop <= posArr[4] :
+						$("html,body").stop().animate({
+							scrollTop: posArr[3]
+						},300)
+						break;
+					case sTop <= posArr[5] :
+						$("html,body").stop().animate({
+							scrollTop: posArr[4]
+						},300)
+						break;
+					}
+				}else {
+					if(sTop < posArr[0]) {
+						$("html,body").stop().animate({
+							scrollTop: posArr[0]
+						},300)
+					}else if(sTop < posArr[1]) {
+						$("html,body").stop().animate({
+							scrollTop: posArr[1]
+						},300)
+					}else if(sTop < posArr[2]) {
+						$("html,body").stop().animate({
+							scrollTop: posArr[2]
+						},300)
+					}else if(sTop < posArr[3]) {
+						$("html,body").stop().animate({
+							scrollTop: posArr[3]
+						},300)
+					}else if(sTop < posArr[4]) {
+						$("html,body").stop().animate({
+							scrollTop: posArr[4]
+						},300)
+					}else if(sTop < posArr[5]) {
+						$("html,body").stop().animate({
+							scrollTop: posArr[5]
+						},300)
+					}
+			}
+		})
+		$(window).on("resize",function() {
+			$(".page-box").height(window.innerHeight);
+			posArr = [];
+			$(".page-box").each(function(index, key) {
+				posArr.push(parseInt($(key).position().top));
+			})
+			posArr.push(parseInt($("#footer").position().top));
+		})
+	</script>
+</body>
+</html>
